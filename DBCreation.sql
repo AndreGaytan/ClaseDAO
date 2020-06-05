@@ -22,6 +22,15 @@ BEGIN
 END
 ??
 
+Delimiter ??
+CREATE PROCEDURE readUsuario(IN id int)
+BEGIN
+	SELECT *
+    FROM USUARIOS
+    WHERE UserID=id;
+END
+??
+
 INSERT INTO USUARIOS(Username, Pwd, Nombre, Apellido) VALUES ('Usuario1','1234','Ernesto','Fierro');
 INSERT INTO USUARIOS(Username, Pwd, Nombre, Apellido) VALUES ('Usuario2','1234','Hector','Gómez');
 INSERT INTO USUARIOS(Username, Pwd, Nombre, Apellido) VALUES ('Usuario3','1234','Rainerio','Amézquita');
@@ -29,3 +38,4 @@ INSERT INTO USUARIOS(Username, Pwd, Nombre, Apellido) VALUES ('Usuario4','1234',
 INSERT INTO USUARIOS(Username, Pwd, Nombre, Apellido) VALUES ('Usuario5','1234','Miguel','Gómez');
 INSERT INTO USUARIOS(Username, Pwd, Nombre, Apellido) VALUES ('Usuario6','1234','Andre','Hernández');
 INSERT INTO USUARIOS(Username, Pwd, Nombre, Apellido) VALUES ('Usuario7','1234','André','Gaytan');
+
