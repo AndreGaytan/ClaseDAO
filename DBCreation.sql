@@ -14,6 +14,18 @@ ALTER TABLE USUARIOS
 ADD CONSTRAINT PK_USUARIOS PRIMARY KEY (UserID),
 MODIFY UserID tinyint AUTO_INCREMENT;
 
+/*NOTA: Ojo muchachos, esta parte del script, si lo van a correr en PhpMyAdmin tendrán que hacerlo por separado
+es decir, copiaran y pegaran el script sin la definicion de los procedimientos almacenados, y despues en otro script
+ejecutan dichos procedimientos, para hacerlo tendran que quitar la palabra delimiter, pero si dejaran el ??, es decir, asi
+	CREATE PROCEDURE nombreDelMetodo()
+		BEGIN
+			Instrucciones..
+		END
+        ??
+recuerden indicarle a PhpMyAdmin que el delimitador es ??, para indicarlo solo escribanlo en el campo de texto que se 
+encuentra justo abajo de su script.
+*/
+
 Delimiter ??
 CREATE PROCEDURE readAllUsuarios()
 BEGIN
